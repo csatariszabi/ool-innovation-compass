@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #F8F7F4;
+    color: #0B0B0B;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .score-bar-track { @apply h-1 rounded-full bg-gray-200 overflow-hidden; }
+  .score-bar-fill { @apply h-full rounded-full transition-all duration-500; }
+  .grade-pill {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #9CA3AF; }
